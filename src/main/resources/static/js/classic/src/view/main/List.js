@@ -9,7 +9,7 @@ Ext.define('apiDemo.view.main.List', {
         'apiDemo.store.Personnel'
     ],
 
-    title: 'Personnel',
+    title: '<b>Resumen de consumos (Demos)</b>',
 
     store: {
         type: 'personnel'

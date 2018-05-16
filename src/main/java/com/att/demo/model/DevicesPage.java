@@ -1,16 +1,18 @@
 package com.att.demo.model;
 
-public class PagApiResponse<T> {
+import java.util.List;
 
-	private T obj;
+/**
+ * Contiene el resultado de la busqueda de dispositivos
+ * 
+ * @author gerce
+ *
+ */
+public class DevicesPage {
+
 	private Integer pageNumber;
 	private Boolean lastPage;
-	public T getObj() {
-		return obj;
-	}
-	public void setObj(T obj) {
-		this.obj = obj;
-	}
+	private List<Device> devices;
 	public Integer getPageNumber() {
 		return pageNumber;
 	}
@@ -23,15 +25,21 @@ public class PagApiResponse<T> {
 	public void setLastPage(Boolean lastPage) {
 		this.lastPage = lastPage;
 	}
+	public List<Device> getDevices() {
+		return devices;
+	}
+	public void setDevices(List<Device> devices) {
+		this.devices = devices;
+	}
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("PagApiResponse [obj=");
-		builder.append(obj);
-		builder.append(", pageNumber=");
+		builder.append("DevicesPage [pageNumber=");
 		builder.append(pageNumber);
 		builder.append(", lastPage=");
 		builder.append(lastPage);
+		builder.append(", devices=");
+		builder.append(devices);
 		builder.append("]");
 		return builder.toString();
 	}

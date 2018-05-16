@@ -15,7 +15,8 @@ Ext.define('apiDemo.view.main.Main', {
 
         'apiDemo.view.main.MainController',
         'apiDemo.view.main.MainModel',
-        'apiDemo.view.main.List'
+        'apiDemo.view.main.List',
+        'apiDemo.view.main.AccountsSummary'
     ],
 
     controller: 'main',
@@ -75,14 +76,16 @@ Ext.define('apiDemo.view.main.Main', {
         }
     },
 
-    items: [{
-        title: 'Home',
-        iconCls: 'fa-home',
+    items: [
+    {
+        title: 'Resumen Consumos',
+        iconCls: 'fa-users',
         // The following grid shares a store with the classic version's grid as well!
         items: [{
-            xtype: 'mainlist'
+            xtype: 'accountsSummaryMain'
         }]
-    }, {
+    }
+    /*, {
         title: 'Users',
         iconCls: 'fa-user',
         bind: {
@@ -100,5 +103,6 @@ Ext.define('apiDemo.view.main.Main', {
         bind: {
             html: '{loremIpsum}'
         }
-    }]
+    }*/
+    ]
 });
